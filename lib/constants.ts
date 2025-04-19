@@ -1,5 +1,7 @@
 import { DivideIcon as LucideIcon, BookOpen, ChevronRight, Users, Award, Clock, BookCheck, BookMarked, BookText, Globe, School } from "lucide-react";
 
+type LucideIconProps = React.SVGProps<SVGSVGElement> & React.RefAttributes<SVGSVGElement>;
+
 export type Course = {
   id: string;
   title: string;
@@ -21,7 +23,7 @@ export type Course = {
 export type Feature = {
   title: string;
   description: string;
-  icon: LucideIcon;
+  icon: React.ForwardRefExoticComponent<LucideIconProps>;
 };
 
 export type Testimonial = {
